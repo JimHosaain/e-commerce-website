@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce web design</title>
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./Assets/shop-solid-full.svg"
+      type="image/x-icon"
+    />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- daisyui + tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-base-100 font-[Poppins]">
+    <!-- navbar -->
+
+    <header>
+      <div class="navbar bg-base-100 shadow-sm max-w-7xl mx-auto px-4">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-50"
+            >
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#footer">About</a></li>
+              <li><a href="#footer">Contact</a></li>
+            </ul>
+          </div>
+
+          <a class="btn btn-ghost text-xl font-bold">SwiftCart</a>
+        </div>
+
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-2">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#footer">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar-end">
+          <button class="btn">
+            <i class="fa-solid fa-cart-shopping text-blue-400"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--  -->
+
+    <main class="max-w-7xl mx-auto px-4">
+
+      <!-- hero -->
+      <section
+        id="hero"
+        class="hero min-h-[60vh] rounded-2xl overflow-hidden my-12 relative"
+      >
+        <img
+          src="./Assets/banner-image.png"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        />
+
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+        <div class="hero-content text-center text-white relative z-20">
+          <div class="max-w-xl">
+            <h1 class="mb-5 text-4xl md:text-5xl font-bold">
+              Best Collection For You
+            </h1>
+
+            <p class="mb-5">
+              Discover the latest trends in fashion, electronics and more.
+              Shop with confidence and style at SwiftCart.
+            </p>
+
+            <a href="#products" class="btn btn-primary rounded-full">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- why -->
+
+      <section class="py-16 bg-base-200 rounded-2xl mb-16">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold">Why Choose Us</h2>
+          <p class="text-gray-500 mt-2">
+            We provide the best shopping experience.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+          <div class="card bg-base-100 shadow">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-truck-fast text-3xl text-primary"></i>
+              <h3 class="font-bold">Fast Delivery</h3>
+              <p class="text-sm">Quick and efficient delivery.</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-headset text-3xl text-primary"></i>
+              <h3 class="font-bold">24/7 Support</h3>
+              <p class="text-sm">Always ready to help.</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-shield-halved text-3xl text-primary"></i>
+              <h3 class="font-bold">Secure Payment</h3>
+              <p class="text-sm">Safe transactions.</p>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow">
+            <div class="card-body text-center">
+              <i class="fa-solid fa-rotate text-3xl text-primary"></i>
+              <h3 class="font-bold">Easy Returns</h3>
+              <p class="text-sm">30-day return policy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- trend -->
+
+      <section class="py-16 mb-16">
+        <h2 class="text-2xl font-bold text-center mb-8">Trending Now</h2>
+        <div
+          id="trending-container"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+      </section>
+
+      <!-- product -->
+
+      <section id="products" class="py-16">
+        <h1 class="font-bold mb-8 text-center text-2xl">Our Products</h1>
+
+        <div
+          id="level-container"
+          class="flex gap-4 flex-wrap justify-center mb-10"
+        ></div>
+
+        <section
+          id="card-container"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        ></section>
+      </section>
+
+    </main>
+
+    <!-- footer -->
+
+    <footer id="footer" class="bg-blue-950 text-white mt-16">
+
+      <div class="footer sm:footer-horizontal p-10 max-w-7xl mx-auto">
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+        </nav>
+
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About</a>
+          <a class="link link-hover">Contact</a>
+        </nav>
+
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <div class="join">
+            <input class="input input-bordered join-item" placeholder="Email" />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer px-10 pb-6 max-w-7xl mx-auto">
+        <p>© SwiftCart — All rights reserved</p>
+      </div>
+
+    </footer>
+
+    <script src="./web.js"></script>
+  </body>
+</html>
